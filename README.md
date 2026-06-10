@@ -4,7 +4,7 @@
 |-------|-------|
 | **Repository** | [github.com/uzzielperez/CNM](https://github.com/uzzielperez/CNM) |
 | **Data steward** | Uzziel Perez ([uzzielperez25@gmail.com](mailto:uzzielperez25@gmail.com)) |
-| **DMP version** | 1.0 |
+| **DMP version** | 1.1 |
 | **Last reviewed** | 2025-06-10 |
 | **Dissemination** | Public (measurement data); restricted elements noted in §2.2 |
 | **Policy basis** | Horizon Europe GA Art. 17 · FAIR principles · *as open as possible, as closed as necessary* |
@@ -49,7 +49,7 @@ No third-party datasets are currently reused. External PDK model files (180 nm) 
 | Tabular measurements | `.csv` | Spreadsheet, Python/pandas | Yes |
 | Noise spectra | `.dat` (ASCII, header comments) | Noise analyser export | Yes |
 | Lab notes | `.txt` (UTF-8) | Plain text editor | Yes |
-| Analysis code (planned) | `.py`, `.m`, or SPICE netlists | TBD under `src/` | Yes (target) |
+| Analysis code | `.py`, `.m`, `.ogs` (Origin LabTalk) | `src/python`, `src/matlab`, `src/origin` | Yes |
 
 Preferred formats follow [UK Data Service recommended formats](https://ukdataservice.ac.uk/learning-hub/research-data-management/format-your-data/): plain text and non-proprietary tabular formats for long-term readability.
 
@@ -168,9 +168,11 @@ CNM/
 2. Do not redistribute foundry PDK content not included in this repo.
 3. Document any further processing in a fork or derivative dataset.
 
-**Tools for validation / reuse (planned under `src/`):**
+**Tools for validation / reuse (`src/`):**
 
-- Python 3.x + pandas for tabular ingestion
+- **Python 3.10+** — `src/python/run_pipeline.py` (CSV + DAT → `data/02_processed/`)
+- **MATLAB R2021a+** — `src/matlab/run_cnm_pipeline.m`
+- **Origin 2024b** — LabTalk scripts in `src/origin/*.ogs`
 - SPICE simulator (vendor-specific) for simulation replay — document version in `documentation/`
 
 ---
@@ -276,7 +278,116 @@ Corner leakage (`documentation/meeting_notes_also_has_data.txt`):
 
 ---
 
-## 9. How to access and cite
+## 9. Analysis environment & pipelines
+
+Scripts under `src/` read from `datasets/` (legacy) or `data/01_raw/` and write summaries to `data/02_processed/`. **Pick the path that matches the software you already use** — you do not need all three.
+
+```
+src/
+├── python/     # batch tables, automation, reproducible pipelines
+├── matlab/     # interactive plots, matrix-friendly exploration
+└── origin/     # publication figures, lab-style graphing
+```
+
+---
+
+### For Python users
+
+**What is Python?**  
+Python is a free, open-source programming language widely used for data analysis and scripting. Libraries such as **pandas** (tables) and **matplotlib** (plots) make it easy to load CSV/DAT files, run the same steps on many datasets, and integrate with CI or notebooks. **Best fit here:** batch-processing all CNM files in one command and writing summary tables for the DMP pipeline.
+
+| | |
+|---|---|
+| **You need** | Python 3.10+, `pip`, `venv` |
+| **Scripts** | `src/python/run_pipeline.py`, `loaders.py`, `process_*.py` |
+| **Install** | `pip install -r requirements.txt` |
+
+```bash
+cd CNM
+python3 -m venv .venv
+source .venv/bin/activate          # macOS / Linux
+# .venv\Scripts\activate         # Windows
+
+pip install --upgrade pip
+pip install -r requirements.txt
+python src/python/run_pipeline.py
+```
+
+**Outputs** in `data/02_processed/`:
+
+| File | Source inputs |
+|------|----------------|
+| `iv_summary.csv` | `march8.csv`, `data1.csv` |
+| `noise_summary.csv` | `noise_NEW2.dat` |
+| `ac_summary.csv` | `FINAL_v3_USETHIS.csv` |
+| `yield_summary.csv` | `definitive_DEFINITIVE.csv` |
+
+Deactivate with `deactivate`. The `.venv/` folder is gitignored.
+
+---
+
+### For MATLAB users
+
+**What is MATLAB?**  
+MATLAB (MathWorks) is a commercial numerical computing environment built around matrices, plotting, and toolboxes for engineering and device modelling. Its interactive desktop suits **quick plots and ad-hoc exploration** without installing extra packages. **Best fit here:** loading a single IV or noise trace, inspecting it in a figure, and exporting results from the MATLAB workspace.
+
+| | |
+|---|---|
+| **You need** | MATLAB R2021a+ (tested with R2024b); no extra toolboxes |
+| **Scripts** | `src/matlab/run_cnm_pipeline.m`, `load_cnm_data.m`, `plot_*.m` |
+
+```matlab
+cd('/path/to/CNM')
+addpath('src/matlab');
+
+run_cnm_pipeline                    % → data/02_processed/iv_summary_matlab.csv
+plot_iv_curve('march8.csv')         % IV figure
+plot_noise_spectrum('noise_NEW2.dat') % log-log noise figure
+```
+
+`load_cnm_data.m` reads `.csv` via `readtable` and `.dat` via a custom parser (skips `#` comment lines). Set the **Current Folder** to the repo root so paths resolve.
+
+---
+
+### For Origin users
+
+**What is Origin?**  
+[Origin](https://www.originlab.com/) (OriginLab) is commercial graphing and analysis software common in physics and electronics labs. It emphasises **point-and-click import, axis formatting, and publication-quality figures** (log scales, multi-panel layouts, batch export). LabTalk scripts (`.ogs`) automate repetitive import/plot steps. **Best fit here:** building paper-ready IV, noise, and Bode plots from the same CSV/DAT exports the bench instruments produce.
+
+| | |
+|---|---|
+| **You need** | Origin or OriginPro 2021+ (scripts written for 2024b); OriginLab licence |
+| **Scripts** | `src/origin/import_iv.ogs`, `import_noise.ogs`, `plot_bode.ogs` |
+| **More detail** | `src/origin/README.md` |
+
+1. In the **Script Window**, set your repo path:
+
+   ```labtalk
+   CNM_DATA_DIR$ = "/absolute/path/to/CNM/";
+   ```
+
+2. **File → Script → Run Script** and choose a script:
+
+   | Script | Input | Result |
+   |--------|-------|--------|
+   | `import_iv.ogs` | `march8.csv` | IV curve, log Y |
+   | `import_noise.ogs` | `noise_NEW2.dat` | Log-log noise spectrum |
+   | `plot_bode.ogs` | `FINAL_v3_USETHIS.csv` | Gain vs frequency |
+
+**Prefer the GUI?** **File → Import → Single ASCII** — comma delimiter for `.csv`, space for `.dat`, skip rows starting with `#`. Export figures at 300 DPI (PNG/PDF) via **File → Export Graphs**.
+
+---
+
+### File formats (all paths)
+
+| Extension | Delimiter | Header | Python | MATLAB | Origin |
+|-----------|-----------|--------|--------|--------|--------|
+| `.csv` | comma | row 1 names | `pandas.read_csv` | `readtable` | `impASC` |
+| `.dat` | whitespace | `#` then column row | `load_noise_dat` | `read_cnm_dat` | `impASC` (space) |
+
+---
+
+## 10. How to access and cite
 
 ### Clone
 
@@ -302,7 +413,7 @@ After Zenodo deposition, replace `howpublished` with `doi = {10.xxxx/zenodo.xxxx
 
 ---
 
-## 10. Contributing and data quality
+## 11. Contributing and data quality
 
 1. Raw exports → `data/01_raw/` with date-stamped filenames (`iv_sweep_2025-03-08.csv`).
 2. Processing scripts → `src/`; outputs → `02_processed/` or `03_final/`.
@@ -313,17 +424,18 @@ FAIR principles do not guarantee intrinsic data quality — always inspect `01_r
 
 ---
 
-## 11. DMP revision history
+## 12. DMP revision history
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | 2025-06-10 | Uzziel Perez | Initial DMP-compliant README; FAIR inventory; EU access policy |
+| 1.1 | 2025-06-10 | Uzziel Perez | Added `src/` pipelines; per-tool user guides (Python, MATLAB, Origin) |
 
 *This DMP is a living document. Review and update at least once per project year or before each Zenodo release.*
 
 ---
 
-## 12. Contact
+## 13. Contact
 
 **Data steward:** Uzziel Perez — [uzzielperez25@gmail.com](mailto:uzzielperez25@gmail.com)
 
