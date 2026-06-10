@@ -1,0 +1,26 @@
+# CNM Python analysis environment
+# Human-readable source of truth. Install with:
+#   pip install -r requirements.txt
+# (requirements.txt is kept in sync with this file)
+
+name: cnm-analysis
+description: Dependencies for CNM CSV/DAT processing pipelines
+
+python:
+  minimum: "3.10"
+  recommended: "3.11"
+
+dependencies:
+  pandas:
+    spec: ">=2.0,<3.0"
+    purpose: Tabular ingestion of CSV exports
+  numpy:
+    spec: ">=1.24,<3.0"
+    purpose: Numerical arrays and log-log fits
+  matplotlib:
+    spec: ">=3.7,<4.0"
+    purpose: Optional figures from pipeline scripts
+
+pip:
+  upgrade_before_install: true
+  install_file: requirements.txt

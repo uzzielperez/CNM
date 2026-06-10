@@ -178,6 +178,8 @@ related_identifier:
 ```
 CNM/
 ├── README.md                 # Landing page + condensed DMP (this file)
+├── requirements.yaml         # Python deps (human-readable, canonical)
+├── requirements.txt          # Python deps (pip install)
 ├── LICENSE                   # CC-BY-4.0 (data) + MIT (code) — add before release
 ├── CITATION.cff              # Machine-readable citation (planned)
 ├── data/
@@ -343,7 +345,7 @@ Python is a free, open-source programming language widely used for data analysis
 |---|---|
 | **You need** | Python 3.10+, `pip`, `venv` |
 | **Scripts** | `src/python/run_pipeline.py`, `loaders.py`, `process_*.py` |
-| **Install** | `pip install -r requirements.txt` |
+| **Dependencies** | [`requirements.yaml`](requirements.yaml) (human-readable) · [`requirements.txt`](requirements.txt) (pip) |
 
 ```bash
 cd CNM
@@ -352,9 +354,11 @@ source .venv/bin/activate          # macOS / Linux
 # .venv\Scripts\activate         # Windows
 
 pip install --upgrade pip
-pip install -r requirements.txt
+pip install -r requirements.txt    # generated from requirements.yaml
 python src/python/run_pipeline.py
 ```
+
+**`requirements.yaml`** is the documented source of truth (Python version, package specs, purpose per dependency). Use **`requirements.txt`** for `pip install`; keep both files in sync when adding packages.
 
 **Outputs** in `data/02_processed/`:
 
