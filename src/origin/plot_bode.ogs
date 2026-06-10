@@ -1,0 +1,19 @@
+// CNM — Plot AC Bode response from FINAL_v3_USETHIS.csv (LabTalk)
+//
+// Expects columns: freq_hz, gain_db, phase_deg after import.
+
+string csvPath$;
+if (exists(CNM_DATA_DIR$))
+    csvPath$ = CNM_DATA_DIR$ + "datasets/FINAL_v3_USETHIS.csv";
+else
+    csvPath$ = %(system.path.program$) + "../datasets/FINAL_v3_USETHIS.csv";
+
+impASC fname:=csvPath$ options.ImpMode:=0;
+
+// Gain vs frequency (log X)
+plotxy iy:=2 ix:=1 plot:=200 ogl:=<new template:=bode_gain>;
+layer.x.type = 2;    // log10 X
+layer.x.label$ = "Frequency (Hz)";
+layer.y.label$ = "Gain (dB)";
+
+type -a "Bode gain plot ready — adjust template in Origin GUI as needed.";

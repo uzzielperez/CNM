@@ -1,0 +1,18 @@
+// CNM — Import noise .dat (whitespace, comment header) into Origin
+
+string datPath$;
+if (exists(CNM_DATA_DIR$))
+    datPath$ = CNM_DATA_DIR$ + "datasets/noise_NEW2.dat";
+else
+    datPath$ = %(system.path.program$) + "../datasets/noise_NEW2.dat";
+
+// Skip lines starting with # during manual import; script assumes cleaned file
+impASC fname:=datPath$ options.ImpMode:=2 options.Separators:=" "; // space-delimited
+
+plotxy iy:=2 ix:=1 plot:=200;
+layer.x.type = 2;
+layer.y.type = 2;
+layer.x.label$ = "Frequency (Hz)";
+layer.y.label$ = "Sv (V^2/Hz)";
+
+type -a "Noise spectrum plot created from $(datPath$)";

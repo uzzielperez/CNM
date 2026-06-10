@@ -1,0 +1,22 @@
+// CNM — Import IV CSV into Origin (LabTalk script)
+// Run from Origin: File → Script → Run Script, or drag into Script Window
+//
+// Prerequisites:
+//   1. Set working directory to the CNM repo root (see src/origin/README.md)
+//   2. Origin 2021+ recommended for Unicode path support
+
+string csvPath$;
+if (exists(CNM_DATA_DIR$))
+    csvPath$ = CNM_DATA_DIR$ + "datasets/march8.csv";
+else
+    csvPath$ = %(system.path.program$) + "../datasets/march8.csv";
+
+// Import comma-separated IV sweep
+impASC fname:=csvPath$ options.ImpMode:=0 options.Names.AutoNames:=0;
+wks.col1.type = 2;   // X
+wks.col2.type = 1;   // Y (log scale applied in template)
+layer.x.label$ = "Vgs (V)";
+layer.y.label$ = "Ids (A)";
+layer.y.type = 3;    // log10 Y
+
+type -a "Imported IV data from $(csvPath$)";
