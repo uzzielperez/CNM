@@ -4,7 +4,7 @@
 **Project acronym:** CNM  
 **Project name:** Semiconductor Device Characterization Data (180 nm CMOS)  
 **Deliverable:** DMP (repository-level; standalone research dataset)  
-**Version:** 1.1  
+**Version:** 1.2  
 **Date:** 10/06/2025  
 **Dissemination level:** Public  
 **Author(s):** Uzziel Perez  
@@ -19,6 +19,7 @@
 |---------|------------------|--------|
 | 1.0 | 10/06/2025 | Initial DMP; FAIR inventory; EU access policy |
 | 1.1 | 10/06/2025 | Analysis pipelines (`src/`); formal HE PDF export |
+| 1.2 | 10/06/2025 | JSON experiment sidecars (`metadata/`); schema documented |
 
 ---
 
@@ -101,10 +102,27 @@ Keywords: semiconductor characterization, CMOS, 180nm, IV curves, 1/f noise, thr
 | Persistent identifier (DOI) | Planned | Zenodo deposition (EOSC-aligned) |
 | Version control | Active | Git tags per release (e.g. v1.0.0) |
 | Descriptive metadata | Active | README + this DMP |
-| Sidecar metadata | Planned | metadata/ YAML per DataCite Schema 4.4 |
+| Sidecar metadata | Active | metadata/*.json per experiment (hardware, conditions, data_files) |
+| Machine-readable catalogue | Active | metadata/index.json |
 | Discovery indexing | Partial | GitHub; full after Zenodo DOI |
 
-Minimum metadata per deposition: title, creators, description, keywords, licence (CC-BY-4.0), version, publication date, related identifiers. Dublin Core and DataCite-compatible fields will be used. Metadata will be harvestable via Zenodo and GitHub.
+#### JSON experiment sidecars (metadata/)
+
+Each major dataset has a companion JSON file in metadata/ that acts as a human-readable, machine-parsed bridge between lab records and analysis pipelines (Python, MATLAB, Origin). This supports FAIR findability and programmatic ingestion without hard-coded file paths.
+
+Schema (metadata_version 1.0.0):
+
+| Key | Content |
+|-----|---------|
+| metadata_version | Schema semver |
+| experiment_id | Unique ID, e.g. 2025-CNM-IV-001 |
+| hardware_setup | Instruments, DUT, gain, technology node |
+| experimental_conditions | Temperature, bias, corner, measurement date |
+| data_files | Repo-relative paths to raw, processed, and final files |
+
+Conventions: lowercase snake_case keys; SI units in key names (_v, _hz, _c, _db); UTF-8 encoding. Catalogue: metadata/index.json. Current sidecars: march8_iv_sweep.json, noise_NEW2.json, final_ac_response.json, definitive_yield.json. Full specification: metadata/README.md.
+
+Minimum metadata per Zenodo deposition: title, creators, description, keywords, licence (CC-BY-4.0), version, publication date, related identifiers. Dublin Core and DataCite-compatible fields will be used. JSON sidecars complement deposition records with per-experiment instrument and path detail. Metadata will be harvestable via Zenodo and GitHub.
 
 ### 2.2 Making data accessible
 
@@ -142,9 +160,9 @@ Repository structure:
 - src/ — analysis pipelines (Python, MATLAB, Origin)
 - DataManagementPlan/ — formal DMP (this document)
 - docs/ — calibration sheets and lab notes
-- metadata/ — DataCite sidecars (planned)
+- metadata/ — JSON experiment sidecars (index.json + per-run records)
 
-Interoperability: UTF-8 encoding; SI units in headers; consistent column naming (vgs, vds, ids, freq_hz, temp_c); CSV RFC 4180 compliance.
+Interoperability: UTF-8 encoding; SI units in headers; consistent column naming (vgs, vds, ids, freq_hz, temp_c); CSV RFC 4180 compliance. JSON sidecars in metadata/ link tabular files to hardware and experimental context so pipelines can resolve paths programmatically (see Section 2.1).
 
 ### 2.4 Increase data re-use
 

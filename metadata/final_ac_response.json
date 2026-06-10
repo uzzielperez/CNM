@@ -1,0 +1,24 @@
+{
+  "metadata_version": "1.0.0",
+  "experiment_id": "2025-CNM-AC-001",
+  "hardware_setup": {
+    "network_analyser": "Keysight E5071C",
+    "probe_type": "GSG RF probe",
+    "device_under_test": "test amplifier cell A",
+    "technology_node_nm": 180
+  },
+  "experimental_conditions": {
+    "measurement_date": "2025-03-08",
+    "temperature_c": 27,
+    "vdd_v": 3.3,
+    "freq_range_hz": [1000, 1000000],
+    "process_corner": "tt"
+  },
+  "data_files": {
+    "final_tabular": "datasets/FINAL_v3_USETHIS.csv",
+    "target_final": "data/03_final/FINAL_v3_USETHIS.csv",
+    "processed_summary": "data/02_processed/ac_summary.csv",
+    "columns": ["id", "freq_hz", "gain_db", "phase_deg", "vdd"],
+    "note": "Preferred source for Bode plots"
+  }
+}

@@ -4,7 +4,7 @@
 |-------|-------|
 | **Repository** | [github.com/uzzielperez/CNM](https://github.com/uzzielperez/CNM) |
 | **Data steward** | Uzziel Perez ([uzzielperez25@gmail.com](mailto:uzzielperez25@gmail.com)) |
-| **DMP version** | 1.1 |
+| **DMP version** | 1.2 |
 | **Formal DMP (PDF)** | [`DataManagementPlan/DMP_CNM_HE_v1.1.pdf`](DataManagementPlan/DMP_CNM_HE_v1.1.pdf) |
 | **Last reviewed** | 2025-06-10 |
 | **Dissemination** | Public (measurement data); restricted elements noted in §2.2 |
@@ -27,7 +27,30 @@ Regenerate the PDF after editing the Markdown: `python3 src/python/generate_dmp_
 
 **Template source:** Structure follows the official **Horizon Europe Data Management Plan template v1.1** (01.04.2022), as published by the European Commission on the [EU Funding & Tenders Portal](https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/myarea/projects) under *Reference Documents → Project reporting templates → Data management plan (HE)*. Using that Word template is recommended but not mandatory; this PDF meets the same section requirements (Art. 17, Grant Agreement). See also [Science Europe core requirements](https://doi.org/10.5281/zenodo.4915862) for cross-funder alignment.
 
-Keep the README, Markdown source, and PDF **version numbers in sync** (currently v1.1).
+Keep the README, Markdown source, and PDF **version numbers in sync** (currently v1.2).
+
+### Experiment metadata (JSON)
+
+Structured sidecar files in [`metadata/`](metadata/) act as a **human-readable, machine-parsed bridge** between lab records and automated pipelines (Python, MATLAB, Origin, agentic tools). This satisfies FAIR **findability** and **interoperability** requirements: humans can read the JSON; scripts can parse it without hard-coded paths.
+
+| Field | Purpose |
+|-------|---------|
+| `metadata_version` | Schema semver (currently `1.0.0`) |
+| `experiment_id` | Unique run ID, e.g. `2025-CNM-IV-001` |
+| `hardware_setup` | Instruments, DUT geometry, gain, sampling |
+| `experimental_conditions` | Temperature, bias, corner, date |
+| `data_files` | Repo-relative paths to raw / processed / final files |
+
+**Conventions:** lowercase keys with underscores; SI units in key names (`_v`, `_hz`, `_c`, `_db`); one JSON per experiment. Full schema: [`metadata/README.md`](metadata/README.md). Catalogue: [`metadata/index.json`](metadata/index.json).
+
+| JSON sidecar | Dataset |
+|--------------|---------|
+| `march8_iv_sweep.json` | `datasets/march8.csv` |
+| `noise_NEW2.json` | `datasets/noise_NEW2.dat` |
+| `final_ac_response.json` | `datasets/FINAL_v3_USETHIS.csv` |
+| `definitive_yield.json` | `datasets/definitive_DEFINITIVE.csv` |
+
+Add a new JSON sidecar whenever a raw export lands in `data/01_raw/`.
 
 ---
 
@@ -111,10 +134,13 @@ Each dataset should carry a companion `README` or metadata row stating: **who** 
 | Persistent identifier (DOI) | Planned | Deposit release snapshots on [Zenodo](https://zenodo.org) (EOSC-aligned, general-purpose repository) |
 | Version control | Active | Git tags per release (e.g. `v1.0.0`) |
 | Descriptive metadata | This README | Dublin Core / DataCite-compatible fields below |
-| Sidecar metadata | Planned | `metadata/` YAML or JSON per dataset (DataCite Schema 4.4) |
+| Sidecar metadata | Active | `metadata/*.json` per experiment (see [`metadata/README.md`](metadata/README.md)) |
+| Machine-readable catalogue | Active | [`metadata/index.json`](metadata/index.json) lists all experiment IDs |
 | Discovery indexing | Partial | GitHub search; full indexing after Zenodo DOI registration |
 
-**Minimum metadata record (per deposition):**
+JSON sidecars complement (not replace) deposition-level metadata on Zenodo. Per-experiment JSON holds instrument and path detail; Zenodo records hold creators, licence, and DOI.
+
+**Minimum metadata record (per Zenodo deposition):**
 
 ```yaml
 title: "CNM — <dataset name>"
@@ -161,7 +187,7 @@ CNM/
 ├── src/                      # Analysis pipelines and automation
 ├── DataManagementPlan/       # Formal DMP (PDF + Markdown source)
 ├── docs/                     # Calibration sheets, datasheets, lab notes
-└── metadata/                 # DataCite / Dublin Core sidecars (planned)
+└── metadata/                 # JSON experiment sidecars (machine + human readable)
 ```
 
 **Interoperability measures:**
@@ -447,6 +473,7 @@ FAIR principles do not guarantee intrinsic data quality — always inspect `01_r
 |---------|------|--------|---------|
 | 1.0 | 2025-06-10 | Uzziel Perez | Initial DMP-compliant README; FAIR inventory; EU access policy |
 | 1.1 | 2025-06-10 | Uzziel Perez | Added `src/` pipelines; per-tool user guides; HE DMP PDF in `DataManagementPlan/` |
+| 1.2 | 2025-06-10 | Uzziel Perez | JSON experiment sidecars in `metadata/`; documented in README and DMP |
 
 *This DMP is a living document. Review and update at least once per project year or before each Zenodo release.*
 

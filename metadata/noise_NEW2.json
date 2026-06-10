@@ -1,0 +1,31 @@
+{
+  "metadata_version": "1.0.0",
+  "experiment_id": "2025-CNM-NOISE-001",
+  "hardware_setup": {
+    "noise_analyser": "Keysight E4727A",
+    "preamplifier_gain_db": 40,
+    "device_under_test": "nMOS test structure",
+    "channel_width_um": 10.0,
+    "channel_length_um": 0.18,
+    "technology_node_nm": 180
+  },
+  "experimental_conditions": {
+    "measurement_date": "2025-03-08",
+    "temperature_c": 27,
+    "vdd_v": 1.8,
+    "bias_point": "saturation",
+    "freq_range_hz": [10, 100000],
+    "process_corner": "tt"
+  },
+  "data_files": {
+    "raw_spectrum": "datasets/noise_NEW2.dat",
+    "target_raw": "data/01_raw/noise_NEW2.dat",
+    "processed_summary": "data/02_processed/noise_summary.csv",
+    "columns": ["freq", "Sv", "Si"],
+    "units": {
+      "freq": "Hz",
+      "Sv": "V^2/Hz",
+      "Si": "A^2/Hz"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "metadata_version": "1.0.0",
+  "repository": "CNM",
+  "description": "Catalogue of CNM experiment metadata sidecars",
+  "last_updated": "2025-06-10",
+  "experiments": [
+    {
+      "experiment_id": "2025-CNM-IV-001",
+      "metadata_file": "metadata/march8_iv_sweep.json",
+      "experiment_type": "dc_iv_sweep"
+    },
+    {
+      "experiment_id": "2025-CNM-NOISE-001",
+      "metadata_file": "metadata/noise_NEW2.json",
+      "experiment_type": "noise_spectrum"
+    },
+    {
+      "experiment_id": "2025-CNM-AC-001",
+      "metadata_file": "metadata/final_ac_response.json",
+      "experiment_type": "ac_frequency_response"
+    },
+    {
+      "experiment_id": "2025-CNM-YIELD-001",
+      "metadata_file": "metadata/definitive_yield.json",
+      "experiment_type": "wafer_yield"
+    }
+  ]
+}

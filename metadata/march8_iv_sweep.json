@@ -1,0 +1,28 @@
+{
+  "metadata_version": "1.0.0",
+  "experiment_id": "2025-CNM-IV-001",
+  "hardware_setup": {
+    "probe_station": "Cascade Summit 12000",
+    "source_measure_unit": "Keithley 4200A-SCS",
+    "device_under_test": "nMOS test structure",
+    "channel_width_um": 10.0,
+    "channel_length_um": 0.18,
+    "technology_node_nm": 180
+  },
+  "experimental_conditions": {
+    "measurement_date": "2025-03-08",
+    "temperature_c": 27,
+    "vdd_v": 1.8,
+    "vgs_sweep_start_v": 0.0,
+    "vgs_sweep_stop_v": 1.8,
+    "vds_fixed_v": 1.8,
+    "process_corner": "tt",
+    "operator": "lab_team"
+  },
+  "data_files": {
+    "raw_tabular": "datasets/march8.csv",
+    "target_raw": "data/01_raw/march8.csv",
+    "processed_summary": "data/02_processed/iv_summary.csv",
+    "columns": ["run", "vgs", "vds", "ids", "temp_c"]
+  }
+}

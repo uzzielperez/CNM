@@ -19,7 +19,7 @@ endobj
 << /Type /Page /Parent 13  0 R /MediaBox [0 0 595 842] /Contents 3 0 R /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> >>
 endobj
 5 0 obj
-<< /Length 6948 >>
+<< /Length 6923 >>
 stream
 BT /F2 14 Tf 1 0 0 1 50 792 Tm (History of changes) Tj ET
 BT /F2 8 Tf 1 0 0 1 50 774 Tm (Version) Tj ET
@@ -31,310 +31,340 @@ BT /F1 8 Tf 1 0 0 1 376 758 Tm (Initial DMP; FAIR inventory; EU ) Tj ET
 BT /F1 8 Tf 1 0 0 1 50 742 Tm (1.1) Tj ET
 BT /F1 8 Tf 1 0 0 1 213 742 Tm (10/06/2025) Tj ET
 BT /F1 8 Tf 1 0 0 1 376 742 Tm (Analysis pipelines \(src/\); forma) Tj ET
-BT /F2 14 Tf 1 0 0 1 50 712 Tm (1. Data summary) Tj ET
-BT /F2 12 Tf 1 0 0 1 50 686 Tm (1.1 Purpose of data generation and relation to project objectives) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 668 Tm (The CNM repository collects and curates semiconductor device characterization data for 180) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 654 Tm (nm CMOS technology. The data support device-level and circuit-level research objectives:) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 640 Tm (Data enable comparison of measured versus simulated device behaviour, production of) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 626 Tm (publication figures, and documentation of calibration conditions for reproducibility.) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 612 Tm (Technology context: 180 nm PDK; nominal supply 1.8 V; process corners tt, ff, ss, fs, sf.) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 598 Tm (? Extraction of DC parameters \(threshold voltage, Ion, Ioff, subthreshold swing\)) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 584 Tm (? Validation of process-corner and Monte Carlo simulation setups) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 570 Tm (? Analysis of 1/f noise and AC frequency response) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 556 Tm (? Wafer-level yield and figures-of-merit benchmarking) Tj ET
-BT /F2 12 Tf 1 0 0 1 50 534 Tm (1.2 Re-use of existing data) Tj ET
-BT /F2 8 Tf 1 0 0 1 50 516 Tm (Asset ID) Tj ET
-BT /F2 8 Tf 1 0 0 1 148 516 Tm (Filename) Tj ET
-BT /F2 8 Tf 1 0 0 1 246 516 Tm (Generated / Reused) Tj ET
-BT /F2 8 Tf 1 0 0 1 344 516 Tm (Origin) Tj ET
-BT /F2 8 Tf 1 0 0 1 442 516 Tm (Purpose) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 500 Tm (D1) Tj ET
-BT /F1 8 Tf 1 0 0 1 148 500 Tm (march8.csv) Tj ET
-BT /F1 8 Tf 1 0 0 1 246 500 Tm (Generated) Tj ET
-BT /F1 8 Tf 1 0 0 1 344 500 Tm (Lab IV measurement) Tj ET
-BT /F1 8 Tf 1 0 0 1 442 500 Tm (DC sweep validation) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 484 Tm (D2) Tj ET
-BT /F1 8 Tf 1 0 0 1 148 484 Tm (copy of copy of IV_curves.xlsx.c) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 726 Tm (1.2) Tj ET
+BT /F1 8 Tf 1 0 0 1 213 726 Tm (10/06/2025) Tj ET
+BT /F1 8 Tf 1 0 0 1 376 726 Tm (JSON experiment sidecars \(metada) Tj ET
+BT /F2 14 Tf 1 0 0 1 50 696 Tm (1. Data summary) Tj ET
+BT /F2 12 Tf 1 0 0 1 50 670 Tm (1.1 Purpose of data generation and relation to project objectives) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 652 Tm (The CNM repository collects and curates semiconductor device characterization data for 180) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 638 Tm (nm CMOS technology. The data support device-level and circuit-level research objectives:) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 624 Tm (Data enable comparison of measured versus simulated device behaviour, production of) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 610 Tm (publication figures, and documentation of calibration conditions for reproducibility.) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 596 Tm (Technology context: 180 nm PDK; nominal supply 1.8 V; process corners tt, ff, ss, fs, sf.) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 582 Tm (? Extraction of DC parameters \(threshold voltage, Ion, Ioff, subthreshold swing\)) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 568 Tm (? Validation of process-corner and Monte Carlo simulation setups) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 554 Tm (? Analysis of 1/f noise and AC frequency response) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 540 Tm (? Wafer-level yield and figures-of-merit benchmarking) Tj ET
+BT /F2 12 Tf 1 0 0 1 50 518 Tm (1.2 Re-use of existing data) Tj ET
+BT /F2 8 Tf 1 0 0 1 50 500 Tm (Asset ID) Tj ET
+BT /F2 8 Tf 1 0 0 1 148 500 Tm (Filename) Tj ET
+BT /F2 8 Tf 1 0 0 1 246 500 Tm (Generated / Reused) Tj ET
+BT /F2 8 Tf 1 0 0 1 344 500 Tm (Origin) Tj ET
+BT /F2 8 Tf 1 0 0 1 442 500 Tm (Purpose) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 484 Tm (D1) Tj ET
+BT /F1 8 Tf 1 0 0 1 148 484 Tm (march8.csv) Tj ET
 BT /F1 8 Tf 1 0 0 1 246 484 Tm (Generated) Tj ET
-BT /F1 8 Tf 1 0 0 1 344 484 Tm (Spreadsheet export) Tj ET
-BT /F1 8 Tf 1 0 0 1 442 484 Tm (Raw IV reference) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 468 Tm (D3) Tj ET
-BT /F1 8 Tf 1 0 0 1 148 468 Tm (noise_NEW2.dat) Tj ET
+BT /F1 8 Tf 1 0 0 1 344 484 Tm (Lab IV measurement) Tj ET
+BT /F1 8 Tf 1 0 0 1 442 484 Tm (DC sweep validation) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 468 Tm (D2) Tj ET
+BT /F1 8 Tf 1 0 0 1 148 468 Tm (copy of copy of IV_curves.xlsx.c) Tj ET
 BT /F1 8 Tf 1 0 0 1 246 468 Tm (Generated) Tj ET
-BT /F1 8 Tf 1 0 0 1 344 468 Tm (Noise analyser) Tj ET
-BT /F1 8 Tf 1 0 0 1 442 468 Tm (1/f noise characterisation) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 452 Tm (D4) Tj ET
-BT /F1 8 Tf 1 0 0 1 148 452 Tm (asdfgraph.png.csv) Tj ET
+BT /F1 8 Tf 1 0 0 1 344 468 Tm (Spreadsheet export) Tj ET
+BT /F1 8 Tf 1 0 0 1 442 468 Tm (Raw IV reference) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 452 Tm (D3) Tj ET
+BT /F1 8 Tf 1 0 0 1 148 452 Tm (noise_NEW2.dat) Tj ET
 BT /F1 8 Tf 1 0 0 1 246 452 Tm (Generated) Tj ET
-BT /F1 8 Tf 1 0 0 1 344 452 Tm (Plot export) Tj ET
-BT /F1 8 Tf 1 0 0 1 442 452 Tm (Trace archival) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 436 Tm (D5) Tj ET
-BT /F1 8 Tf 1 0 0 1 148 436 Tm (data1.csv) Tj ET
+BT /F1 8 Tf 1 0 0 1 344 452 Tm (Noise analyser) Tj ET
+BT /F1 8 Tf 1 0 0 1 442 452 Tm (1/f noise characterisation) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 436 Tm (D4) Tj ET
+BT /F1 8 Tf 1 0 0 1 148 436 Tm (asdfgraph.png.csv) Tj ET
 BT /F1 8 Tf 1 0 0 1 246 436 Tm (Generated) Tj ET
-BT /F1 8 Tf 1 0 0 1 344 436 Tm (Bench measurement) Tj ET
-BT /F1 8 Tf 1 0 0 1 442 436 Tm (Sample V?I curve) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 420 Tm (D6) Tj ET
-BT /F1 8 Tf 1 0 0 1 148 420 Tm (Measurements - Juan - version2 -) Tj ET
+BT /F1 8 Tf 1 0 0 1 344 436 Tm (Plot export) Tj ET
+BT /F1 8 Tf 1 0 0 1 442 436 Tm (Trace archival) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 420 Tm (D5) Tj ET
+BT /F1 8 Tf 1 0 0 1 148 420 Tm (data1.csv) Tj ET
 BT /F1 8 Tf 1 0 0 1 246 420 Tm (Generated) Tj ET
-BT /F1 8 Tf 1 0 0 1 344 420 Tm (Post-processed lab data) Tj ET
-BT /F1 8 Tf 1 0 0 1 442 420 Tm (Calibrated DC parameters) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 404 Tm (D7) Tj ET
-BT /F1 8 Tf 1 0 0 1 148 404 Tm (untitled2.csv) Tj ET
+BT /F1 8 Tf 1 0 0 1 344 420 Tm (Bench measurement) Tj ET
+BT /F1 8 Tf 1 0 0 1 442 420 Tm (Sample V?I curve) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 404 Tm (D6) Tj ET
+BT /F1 8 Tf 1 0 0 1 148 404 Tm (Measurements - Juan - version2 -) Tj ET
 BT /F1 8 Tf 1 0 0 1 246 404 Tm (Generated) Tj ET
-BT /F1 8 Tf 1 0 0 1 344 404 Tm (Switch bench) Tj ET
-BT /F1 8 Tf 1 0 0 1 442 404 Tm (Ron/Roff ratios) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 388 Tm (D8) Tj ET
-BT /F1 8 Tf 1 0 0 1 148 388 Tm (FINAL_v3_USETHIS.csv) Tj ET
+BT /F1 8 Tf 1 0 0 1 344 404 Tm (Post-processed lab data) Tj ET
+BT /F1 8 Tf 1 0 0 1 442 404 Tm (Calibrated DC parameters) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 388 Tm (D7) Tj ET
+BT /F1 8 Tf 1 0 0 1 148 388 Tm (untitled2.csv) Tj ET
 BT /F1 8 Tf 1 0 0 1 246 388 Tm (Generated) Tj ET
-BT /F1 8 Tf 1 0 0 1 344 388 Tm (AC analyser + processing) Tj ET
-BT /F1 8 Tf 1 0 0 1 442 388 Tm (Figure-ready frequency response) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 372 Tm (D9) Tj ET
-BT /F1 8 Tf 1 0 0 1 148 372 Tm (definitive_DEFINITIVE.csv) Tj ET
+BT /F1 8 Tf 1 0 0 1 344 388 Tm (Switch bench) Tj ET
+BT /F1 8 Tf 1 0 0 1 442 388 Tm (Ron/Roff ratios) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 372 Tm (D8) Tj ET
+BT /F1 8 Tf 1 0 0 1 148 372 Tm (FINAL_v3_USETHIS.csv) Tj ET
 BT /F1 8 Tf 1 0 0 1 246 372 Tm (Generated) Tj ET
-BT /F1 8 Tf 1 0 0 1 344 372 Tm (Wafer test) Tj ET
-BT /F1 8 Tf 1 0 0 1 442 372 Tm (Yield / fmax benchmarking) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 356 Tm (D10) Tj ET
-BT /F1 8 Tf 1 0 0 1 148 356 Tm (docs/*.txt) Tj ET
+BT /F1 8 Tf 1 0 0 1 344 372 Tm (AC analyser + processing) Tj ET
+BT /F1 8 Tf 1 0 0 1 442 372 Tm (Figure-ready frequency response) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 356 Tm (D9) Tj ET
+BT /F1 8 Tf 1 0 0 1 148 356 Tm (definitive_DEFINITIVE.csv) Tj ET
 BT /F1 8 Tf 1 0 0 1 246 356 Tm (Generated) Tj ET
-BT /F1 8 Tf 1 0 0 1 344 356 Tm (Lab notes) Tj ET
-BT /F1 8 Tf 1 0 0 1 442 356 Tm (Provenance and methods) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 334 Tm (No third-party datasets are currently reused. External 180 nm PDK model files are referenced) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 320 Tm (in documentation but not redistributed due to foundry intellectual property restrictions) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 306 Tm (\(see Sections 2.2 and 6\).) Tj ET
-BT /F2 12 Tf 1 0 0 1 50 284 Tm (1.3 Types and formats of data) Tj ET
-BT /F2 8 Tf 1 0 0 1 50 266 Tm (Data type) Tj ET
-BT /F2 8 Tf 1 0 0 1 172 266 Tm (Format) Tj ET
-BT /F2 8 Tf 1 0 0 1 294 266 Tm (Generation software) Tj ET
-BT /F2 8 Tf 1 0 0 1 416 266 Tm (Open format) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 250 Tm (Tabular measurements) Tj ET
-BT /F1 8 Tf 1 0 0 1 172 250 Tm (CSV \(UTF-8, comma-separated\)) Tj ET
-BT /F1 8 Tf 1 0 0 1 294 250 Tm (Instruments, spreadsheets, Pytho) Tj ET
-BT /F1 8 Tf 1 0 0 1 416 250 Tm (Yes) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 234 Tm (Noise spectra) Tj ET
-BT /F1 8 Tf 1 0 0 1 172 234 Tm (DAT \(ASCII, whitespace-delimited) Tj ET
-BT /F1 8 Tf 1 0 0 1 294 234 Tm (Noise analyser export) Tj ET
+BT /F1 8 Tf 1 0 0 1 344 356 Tm (Wafer test) Tj ET
+BT /F1 8 Tf 1 0 0 1 442 356 Tm (Yield / fmax benchmarking) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 340 Tm (D10) Tj ET
+BT /F1 8 Tf 1 0 0 1 148 340 Tm (docs/*.txt) Tj ET
+BT /F1 8 Tf 1 0 0 1 246 340 Tm (Generated) Tj ET
+BT /F1 8 Tf 1 0 0 1 344 340 Tm (Lab notes) Tj ET
+BT /F1 8 Tf 1 0 0 1 442 340 Tm (Provenance and methods) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 318 Tm (No third-party datasets are currently reused. External 180 nm PDK model files are referenced) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 304 Tm (in documentation but not redistributed due to foundry intellectual property restrictions) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 290 Tm (\(see Sections 2.2 and 6\).) Tj ET
+BT /F2 12 Tf 1 0 0 1 50 268 Tm (1.3 Types and formats of data) Tj ET
+BT /F2 8 Tf 1 0 0 1 50 250 Tm (Data type) Tj ET
+BT /F2 8 Tf 1 0 0 1 172 250 Tm (Format) Tj ET
+BT /F2 8 Tf 1 0 0 1 294 250 Tm (Generation software) Tj ET
+BT /F2 8 Tf 1 0 0 1 416 250 Tm (Open format) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 234 Tm (Tabular measurements) Tj ET
+BT /F1 8 Tf 1 0 0 1 172 234 Tm (CSV \(UTF-8, comma-separated\)) Tj ET
+BT /F1 8 Tf 1 0 0 1 294 234 Tm (Instruments, spreadsheets, Pytho) Tj ET
 BT /F1 8 Tf 1 0 0 1 416 234 Tm (Yes) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 218 Tm (Lab notes) Tj ET
-BT /F1 8 Tf 1 0 0 1 172 218 Tm (TXT \(UTF-8\)) Tj ET
-BT /F1 8 Tf 1 0 0 1 294 218 Tm (Plain text editor) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 218 Tm (Noise spectra) Tj ET
+BT /F1 8 Tf 1 0 0 1 172 218 Tm (DAT \(ASCII, whitespace-delimited) Tj ET
+BT /F1 8 Tf 1 0 0 1 294 218 Tm (Noise analyser export) Tj ET
 BT /F1 8 Tf 1 0 0 1 416 218 Tm (Yes) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 202 Tm (Analysis code) Tj ET
-BT /F1 8 Tf 1 0 0 1 172 202 Tm (PY, M, OGS) Tj ET
-BT /F1 8 Tf 1 0 0 1 294 202 Tm (Python, MATLAB, Origin LabTalk) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 202 Tm (Lab notes) Tj ET
+BT /F1 8 Tf 1 0 0 1 172 202 Tm (TXT \(UTF-8\)) Tj ET
+BT /F1 8 Tf 1 0 0 1 294 202 Tm (Plain text editor) Tj ET
 BT /F1 8 Tf 1 0 0 1 416 202 Tm (Yes) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 180 Tm (Preferred formats follow UK Data Service recommendations: plain text and non-proprietary) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 166 Tm (tabular formats.) Tj ET
-BT /F2 12 Tf 1 0 0 1 50 144 Tm (1.4 Provenance) Tj ET
-BT /F2 8 Tf 1 0 0 1 50 126 Tm (Pipeline stage) Tj ET
-BT /F2 8 Tf 1 0 0 1 213 126 Tm (Repository path) Tj ET
-BT /F2 8 Tf 1 0 0 1 376 126 Tm (Rule) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 110 Tm (Raw instrument output) Tj ET
-BT /F1 8 Tf 1 0 0 1 213 110 Tm (data/01_raw/) Tj ET
-BT /F1 8 Tf 1 0 0 1 376 110 Tm (Read-only; append dated exports ) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 94 Tm (Calibrated / filtered) Tj ET
-BT /F1 8 Tf 1 0 0 1 213 94 Tm (data/02_processed/) Tj ET
-BT /F1 8 Tf 1 0 0 1 376 94 Tm (Document transformations in src/) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 186 Tm (Analysis code) Tj ET
+BT /F1 8 Tf 1 0 0 1 172 186 Tm (PY, M, OGS) Tj ET
+BT /F1 8 Tf 1 0 0 1 294 186 Tm (Python, MATLAB, Origin LabTalk) Tj ET
+BT /F1 8 Tf 1 0 0 1 416 186 Tm (Yes) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 164 Tm (Preferred formats follow UK Data Service recommendations: plain text and non-proprietary) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 150 Tm (tabular formats.) Tj ET
+BT /F2 12 Tf 1 0 0 1 50 128 Tm (1.4 Provenance) Tj ET
+BT /F2 8 Tf 1 0 0 1 50 110 Tm (Pipeline stage) Tj ET
+BT /F2 8 Tf 1 0 0 1 213 110 Tm (Repository path) Tj ET
+BT /F2 8 Tf 1 0 0 1 376 110 Tm (Rule) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 94 Tm (Raw instrument output) Tj ET
+BT /F1 8 Tf 1 0 0 1 213 94 Tm (data/01_raw/) Tj ET
+BT /F1 8 Tf 1 0 0 1 376 94 Tm (Read-only; append dated exports ) Tj ET
 endstream
 endobj
 6 0 obj
 << /Type /Page /Parent 13  0 R /MediaBox [0 0 595 842] /Contents 5 0 R /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> >>
 endobj
 7 0 obj
-<< /Length 5367 >>
+<< /Length 5302 >>
 stream
-BT /F1 8 Tf 1 0 0 1 50 800 Tm (Figure-ready matrices) Tj ET
-BT /F1 8 Tf 1 0 0 1 213 800 Tm (data/03_final/) Tj ET
-BT /F1 8 Tf 1 0 0 1 376 800 Tm (Versioned; cite in publications) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 784 Tm (Methods and calibration) Tj ET
-BT /F1 8 Tf 1 0 0 1 213 784 Tm (docs/) Tj ET
-BT /F1 8 Tf 1 0 0 1 376 784 Tm (Linked from dataset metadata) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 762 Tm (Each dataset records who collected it, when, with which instrument, under which) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 748 Tm (bias/temperature, and what processing was applied.) Tj ET
-BT /F2 12 Tf 1 0 0 1 50 726 Tm (1.5 Expected data size) Tj ET
-BT /F2 8 Tf 1 0 0 1 50 708 Tm (Category) Tj ET
-BT /F2 8 Tf 1 0 0 1 295 708 Tm (Approximate size) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 692 Tm (Current repository) Tj ET
-BT /F1 8 Tf 1 0 0 1 295 692 Tm (< 5 MB) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 676 Tm (Per measurement campaign) Tj ET
-BT /F1 8 Tf 1 0 0 1 295 676 Tm (< 50 MB) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 660 Tm (Full project \(estimated\)) Tj ET
-BT /F1 8 Tf 1 0 0 1 295 660 Tm (< 500 MB) Tj ET
-BT /F2 12 Tf 1 0 0 1 50 630 Tm (1.6 Data utility) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 612 Tm (Target users: semiconductor device researchers, analog/RF circuit designers, reliability and) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 598 Tm (yield engineers, reproducibility reviewers, and EOSC metadata harvesters.) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 584 Tm (Keywords: semiconductor characterization, CMOS, 180nm, IV curves, 1/f noise, threshold) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 570 Tm (voltage, wafer yield, process corners, Monte Carlo, FAIR data.) Tj ET
-BT /F2 14 Tf 1 0 0 1 50 548 Tm (2. FAIR data) Tj ET
-BT /F2 12 Tf 1 0 0 1 50 522 Tm (2.1 Making data findable, including provisions for metadata) Tj ET
-BT /F2 8 Tf 1 0 0 1 50 504 Tm (Measure) Tj ET
-BT /F2 8 Tf 1 0 0 1 213 504 Tm (Status) Tj ET
-BT /F2 8 Tf 1 0 0 1 376 504 Tm (Planned action) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 488 Tm (Persistent identifier \(DOI\)) Tj ET
-BT /F1 8 Tf 1 0 0 1 213 488 Tm (Planned) Tj ET
-BT /F1 8 Tf 1 0 0 1 376 488 Tm (Zenodo deposition \(EOSC-aligned\)) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 472 Tm (Version control) Tj ET
-BT /F1 8 Tf 1 0 0 1 213 472 Tm (Active) Tj ET
-BT /F1 8 Tf 1 0 0 1 376 472 Tm (Git tags per release \(e.g. v1.0.) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 456 Tm (Descriptive metadata) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 800 Tm (Calibrated / filtered) Tj ET
+BT /F1 8 Tf 1 0 0 1 213 800 Tm (data/02_processed/) Tj ET
+BT /F1 8 Tf 1 0 0 1 376 800 Tm (Document transformations in src/) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 784 Tm (Figure-ready matrices) Tj ET
+BT /F1 8 Tf 1 0 0 1 213 784 Tm (data/03_final/) Tj ET
+BT /F1 8 Tf 1 0 0 1 376 784 Tm (Versioned; cite in publications) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 768 Tm (Methods and calibration) Tj ET
+BT /F1 8 Tf 1 0 0 1 213 768 Tm (docs/) Tj ET
+BT /F1 8 Tf 1 0 0 1 376 768 Tm (Linked from dataset metadata) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 746 Tm (Each dataset records who collected it, when, with which instrument, under which) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 732 Tm (bias/temperature, and what processing was applied.) Tj ET
+BT /F2 12 Tf 1 0 0 1 50 710 Tm (1.5 Expected data size) Tj ET
+BT /F2 8 Tf 1 0 0 1 50 692 Tm (Category) Tj ET
+BT /F2 8 Tf 1 0 0 1 295 692 Tm (Approximate size) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 676 Tm (Current repository) Tj ET
+BT /F1 8 Tf 1 0 0 1 295 676 Tm (< 5 MB) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 660 Tm (Per measurement campaign) Tj ET
+BT /F1 8 Tf 1 0 0 1 295 660 Tm (< 50 MB) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 644 Tm (Full project \(estimated\)) Tj ET
+BT /F1 8 Tf 1 0 0 1 295 644 Tm (< 500 MB) Tj ET
+BT /F2 12 Tf 1 0 0 1 50 614 Tm (1.6 Data utility) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 596 Tm (Target users: semiconductor device researchers, analog/RF circuit designers, reliability and) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 582 Tm (yield engineers, reproducibility reviewers, and EOSC metadata harvesters.) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 568 Tm (Keywords: semiconductor characterization, CMOS, 180nm, IV curves, 1/f noise, threshold) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 554 Tm (voltage, wafer yield, process corners, Monte Carlo, FAIR data.) Tj ET
+BT /F2 14 Tf 1 0 0 1 50 532 Tm (2. FAIR data) Tj ET
+BT /F2 12 Tf 1 0 0 1 50 506 Tm (2.1 Making data findable, including provisions for metadata) Tj ET
+BT /F2 8 Tf 1 0 0 1 50 488 Tm (Measure) Tj ET
+BT /F2 8 Tf 1 0 0 1 213 488 Tm (Status) Tj ET
+BT /F2 8 Tf 1 0 0 1 376 488 Tm (Planned action) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 472 Tm (Persistent identifier \(DOI\)) Tj ET
+BT /F1 8 Tf 1 0 0 1 213 472 Tm (Planned) Tj ET
+BT /F1 8 Tf 1 0 0 1 376 472 Tm (Zenodo deposition \(EOSC-aligned\)) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 456 Tm (Version control) Tj ET
 BT /F1 8 Tf 1 0 0 1 213 456 Tm (Active) Tj ET
-BT /F1 8 Tf 1 0 0 1 376 456 Tm (README + this DMP) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 440 Tm (Sidecar metadata) Tj ET
-BT /F1 8 Tf 1 0 0 1 213 440 Tm (Planned) Tj ET
-BT /F1 8 Tf 1 0 0 1 376 440 Tm (metadata/ YAML per DataCite Sche) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 424 Tm (Discovery indexing) Tj ET
-BT /F1 8 Tf 1 0 0 1 213 424 Tm (Partial) Tj ET
-BT /F1 8 Tf 1 0 0 1 376 424 Tm (GitHub; full after Zenodo DOI) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 402 Tm (Minimum metadata per deposition: title, creators, description, keywords, licence \(CC-) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 388 Tm (BY-4.0\), version, publication date, related identifiers. Dublin Core and DataCite-compatible) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 374 Tm (fields will be used. Metadata will be harvestable via Zenodo and GitHub.) Tj ET
-BT /F2 12 Tf 1 0 0 1 50 352 Tm (2.2 Making data accessible) Tj ET
-BT /F2 8 Tf 1 0 0 1 50 334 Tm (Data class) Tj ET
-BT /F2 8 Tf 1 0 0 1 172 334 Tm (Access) Tj ET
-BT /F2 8 Tf 1 0 0 1 294 334 Tm (Licence) Tj ET
-BT /F2 8 Tf 1 0 0 1 416 334 Tm (Restriction) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 318 Tm (Measurement CSV/DAT/TXT) Tj ET
-BT /F1 8 Tf 1 0 0 1 172 318 Tm (Open) Tj ET
-BT /F1 8 Tf 1 0 0 1 294 318 Tm (CC-BY-4.0) Tj ET
-BT /F1 8 Tf 1 0 0 1 416 318 Tm (None; no personal data) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 302 Tm (Lab notes) Tj ET
-BT /F1 8 Tf 1 0 0 1 172 302 Tm (Open) Tj ET
-BT /F1 8 Tf 1 0 0 1 294 302 Tm (CC-BY-4.0) Tj ET
-BT /F1 8 Tf 1 0 0 1 416 302 Tm (Redact third-party names on requ) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 286 Tm (180 nm PDK / foundry models) Tj ET
-BT /F1 8 Tf 1 0 0 1 172 286 Tm (Not distributed) Tj ET
-BT /F1 8 Tf 1 0 0 1 294 286 Tm (N/A) Tj ET
-BT /F1 8 Tf 1 0 0 1 416 286 Tm (IPR / contractual \(foundry NDA\)) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 270 Tm (Pre-publication embargo) Tj ET
-BT /F1 8 Tf 1 0 0 1 172 270 Tm (None currently) Tj ET
-BT /F1 8 Tf 1 0 0 1 294 270 Tm (?) Tj ET
-BT /F1 8 Tf 1 0 0 1 416 270 Tm (Max. embargo if patents filed) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 248 Tm (#### 2.2.1 Repository) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 234 Tm (Primary working repository: GitHub \(https://github.com/uzzielperez/CNM\).) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 220 Tm (Archival repository \(planned\): Zenodo ? trusted, metadata-ready, EOSC-federated general-) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 206 Tm (purpose repository.) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 192 Tm (#### 2.2.2 Data) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 178 Tm (Principle: *As open as possible, as closed as necessary* \(Horizon Europe Programme Guide\).) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 164 Tm (Access protocol: HTTPS git clone and direct download. No authentication for open datasets.) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 150 Tm (#### 2.2.3 Metadata) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 136 Tm (Metadata openly available under CC0. Metadata includes access conditions and contact point) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 122 Tm (even if datasets are later restricted.) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 108 Tm (Contact: uzzielperez25@gmail.com) Tj ET
-BT /F2 12 Tf 1 0 0 1 50 86 Tm (2.3 Making data interoperable) Tj ET
+BT /F1 8 Tf 1 0 0 1 376 456 Tm (Git tags per release \(e.g. v1.0.) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 440 Tm (Descriptive metadata) Tj ET
+BT /F1 8 Tf 1 0 0 1 213 440 Tm (Active) Tj ET
+BT /F1 8 Tf 1 0 0 1 376 440 Tm (README + this DMP) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 424 Tm (Sidecar metadata) Tj ET
+BT /F1 8 Tf 1 0 0 1 213 424 Tm (Active) Tj ET
+BT /F1 8 Tf 1 0 0 1 376 424 Tm (metadata/*.json per experiment \() Tj ET
+BT /F1 8 Tf 1 0 0 1 50 408 Tm (Machine-readable catalogue) Tj ET
+BT /F1 8 Tf 1 0 0 1 213 408 Tm (Active) Tj ET
+BT /F1 8 Tf 1 0 0 1 376 408 Tm (metadata/index.json) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 392 Tm (Discovery indexing) Tj ET
+BT /F1 8 Tf 1 0 0 1 213 392 Tm (Partial) Tj ET
+BT /F1 8 Tf 1 0 0 1 376 392 Tm (GitHub; full after Zenodo DOI) Tj ET
+BT /F2 8 Tf 1 0 0 1 50 370 Tm (Key) Tj ET
+BT /F2 8 Tf 1 0 0 1 295 370 Tm (Content) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 354 Tm (metadata_version) Tj ET
+BT /F1 8 Tf 1 0 0 1 295 354 Tm (Schema semver) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 338 Tm (experiment_id) Tj ET
+BT /F1 8 Tf 1 0 0 1 295 338 Tm (Unique ID, e.g. 2025-CNM-IV-001) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 322 Tm (hardware_setup) Tj ET
+BT /F1 8 Tf 1 0 0 1 295 322 Tm (Instruments, DUT, gain, technolo) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 306 Tm (experimental_conditions) Tj ET
+BT /F1 8 Tf 1 0 0 1 295 306 Tm (Temperature, bias, corner, measu) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 290 Tm (data_files) Tj ET
+BT /F1 8 Tf 1 0 0 1 295 290 Tm (Repo-relative paths to raw, proc) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 268 Tm (#### JSON experiment sidecars \(metadata/\)) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 254 Tm (Each major dataset has a companion JSON file in metadata/ that acts as a human-readable,) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 240 Tm (machine-parsed bridge between lab records and analysis pipelines \(Python, MATLAB, Origin\).) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 226 Tm (This supports FAIR findability and programmatic ingestion without hard-coded file paths.) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 212 Tm (Schema \(metadata_version 1.0.0\):) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 198 Tm (Conventions: lowercase snake_case keys; SI units in key names \(_v, _hz, _c, _db\); UTF-8) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 184 Tm (encoding. Catalogue: metadata/index.json. Current sidecars: march8_iv_sweep.json,) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 170 Tm (noise_NEW2.json, final_ac_response.json, definitive_yield.json. Full specification:) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 156 Tm (metadata/README.md.) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 142 Tm (Minimum metadata per Zenodo deposition: title, creators, description, keywords, licence \(CC-) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 128 Tm (BY-4.0\), version, publication date, related identifiers. Dublin Core and DataCite-compatible) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 114 Tm (fields will be used. JSON sidecars complement deposition records with per-experiment) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 100 Tm (instrument and path detail. Metadata will be harvestable via Zenodo and GitHub.) Tj ET
 endstream
 endobj
 8 0 obj
 << /Type /Page /Parent 13  0 R /MediaBox [0 0 595 842] /Contents 7 0 R /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> >>
 endobj
 9 0 obj
-<< /Length 5049 >>
+<< /Length 5499 >>
 stream
-BT /F1 11 Tf 1 0 0 1 50 800 Tm (Repository structure:) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 786 Tm (Interoperability: UTF-8 encoding; SI units in headers; consistent column naming \(vgs, vds,) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 772 Tm (ids, freq_hz, temp_c\); CSV RFC 4180 compliance.) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 758 Tm (? data/01_raw/ ? factory and instrument outputs \(read-only\)) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 744 Tm (? data/02_processed/ ? calibrated tables) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 730 Tm (? data/03_final/ ? publication-ready matrices) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 716 Tm (? src/ ? analysis pipelines \(Python, MATLAB, Origin\)) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 702 Tm (? DataManagementPlan/ ? formal DMP \(this document\)) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 688 Tm (? docs/ ? calibration sheets and lab notes) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 674 Tm (? metadata/ ? DataCite sidecars \(planned\)) Tj ET
-BT /F2 12 Tf 1 0 0 1 50 652 Tm (2.4 Increase data re-use) Tj ET
-BT /F2 8 Tf 1 0 0 1 50 634 Tm (Output) Tj ET
-BT /F2 8 Tf 1 0 0 1 213 634 Tm (Licence) Tj ET
-BT /F2 8 Tf 1 0 0 1 376 634 Tm (Citation requirement) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 618 Tm (Datasets) Tj ET
-BT /F1 8 Tf 1 0 0 1 213 618 Tm (CC-BY-4.0) Tj ET
-BT /F1 8 Tf 1 0 0 1 376 618 Tm (DOI + version tag) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 602 Tm (Software \(src/\)) Tj ET
-BT /F1 8 Tf 1 0 0 1 213 602 Tm (MIT) Tj ET
-BT /F1 8 Tf 1 0 0 1 376 602 Tm (Repository + release tag) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 586 Tm (Documentation) Tj ET
-BT /F1 8 Tf 1 0 0 1 213 586 Tm (CC-BY-4.0) Tj ET
-BT /F1 8 Tf 1 0 0 1 376 586 Tm (Same as datasets) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 564 Tm (Reuse tools: Python 3.10+ \(pandas\), MATLAB R2021a+, Origin 2021+. See repository README) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 550 Tm (Section 9 and src/ for pipelines.) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 536 Tm (Downstream users must cite the DOI, not redistribute PDK content, and document derivative) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 522 Tm (processing.) Tj ET
-BT /F2 14 Tf 1 0 0 1 50 500 Tm (3. Other research outputs) Tj ET
-BT /F2 8 Tf 1 0 0 1 50 482 Tm (Output) Tj ET
-BT /F2 8 Tf 1 0 0 1 213 482 Tm (Location) Tj ET
-BT /F2 8 Tf 1 0 0 1 376 482 Tm (Preservation) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 466 Tm (Analysis scripts) Tj ET
-BT /F1 8 Tf 1 0 0 1 213 466 Tm (src/) Tj ET
-BT /F1 8 Tf 1 0 0 1 376 466 Tm (Git + Zenodo archive) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 450 Tm (Figures from 03_final/) Tj ET
-BT /F1 8 Tf 1 0 0 1 213 450 Tm (Publications / Zenodo) Tj ET
-BT /F1 8 Tf 1 0 0 1 376 450 Tm (Link to source CSV) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 434 Tm (SPICE netlists) Tj ET
-BT /F1 8 Tf 1 0 0 1 213 434 Tm (src/ or docs/) Tj ET
-BT /F1 8 Tf 1 0 0 1 376 434 Tm (Git; exclude NDA decks) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 418 Tm (Presentations) Tj ET
-BT /F1 8 Tf 1 0 0 1 213 418 Tm (DataManagementPlan/ or Zenodo) Tj ET
-BT /F1 8 Tf 1 0 0 1 376 418 Tm (Supplementary material) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 396 Tm (Software documentation follows Lee et al. \(2014\) Ten simple rules for documenting scientific) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 382 Tm (software.) Tj ET
-BT /F2 14 Tf 1 0 0 1 50 360 Tm (4. Allocation of resources) Tj ET
-BT /F2 8 Tf 1 0 0 1 50 342 Tm (Activity) Tj ET
-BT /F2 8 Tf 1 0 0 1 213 342 Tm (Responsible) Tj ET
-BT /F2 8 Tf 1 0 0 1 376 342 Tm (Effort) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 326 Tm (Data curation) Tj ET
-BT /F1 8 Tf 1 0 0 1 213 326 Tm (Data steward) Tj ET
-BT /F1 8 Tf 1 0 0 1 376 326 Tm (~2 h/month) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 310 Tm (DMP / README updates) Tj ET
-BT /F1 8 Tf 1 0 0 1 213 310 Tm (Data steward) Tj ET
-BT /F1 8 Tf 1 0 0 1 376 310 Tm (Quarterly) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 294 Tm (Zenodo DOI registration) Tj ET
-BT /F1 8 Tf 1 0 0 1 213 294 Tm (Data steward) Tj ET
-BT /F1 8 Tf 1 0 0 1 376 294 Tm (~1 h per release) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 278 Tm (Backup verification) Tj ET
-BT /F1 8 Tf 1 0 0 1 213 278 Tm (Data steward) Tj ET
-BT /F1 8 Tf 1 0 0 1 376 278 Tm (Annually) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 262 Tm (Storage) Tj ET
-BT /F1 8 Tf 1 0 0 1 213 262 Tm (GitHub + Zenodo free tier) Tj ET
-BT /F1 8 Tf 1 0 0 1 376 262 Tm (?0 at current volume) Tj ET
-BT /F2 14 Tf 1 0 0 1 50 232 Tm (5. Data security) Tj ET
-BT /F2 8 Tf 1 0 0 1 50 214 Tm (Risk) Tj ET
-BT /F2 8 Tf 1 0 0 1 295 214 Tm (Mitigation) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 198 Tm (Overwrite of raw data) Tj ET
-BT /F1 8 Tf 1 0 0 1 295 198 Tm (data/01_raw/ append-only; Git hi) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 182 Tm (Data loss) Tj ET
-BT /F1 8 Tf 1 0 0 1 295 182 Tm (GitHub remote + Zenodo snapshots) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 166 Tm (Unauthorised modification) Tj ET
-BT /F1 8 Tf 1 0 0 1 295 166 Tm (Branch protection; immutable rel) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 150 Tm (Confidential leakage) Tj ET
-BT /F1 8 Tf 1 0 0 1 295 150 Tm (No PDK/foundry files in reposito) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 134 Tm (Local workstation loss) Tj ET
-BT /F1 8 Tf 1 0 0 1 295 134 Tm (Push after each curated batch) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 112 Tm (Standard institutional IT policies apply. No sensitive personal data stored \(Section 6\).) Tj ET
-BT /F2 14 Tf 1 0 0 1 50 90 Tm (6. Ethics) Tj ET
+BT /F2 12 Tf 1 0 0 1 50 800 Tm (2.2 Making data accessible) Tj ET
+BT /F2 8 Tf 1 0 0 1 50 782 Tm (Data class) Tj ET
+BT /F2 8 Tf 1 0 0 1 172 782 Tm (Access) Tj ET
+BT /F2 8 Tf 1 0 0 1 294 782 Tm (Licence) Tj ET
+BT /F2 8 Tf 1 0 0 1 416 782 Tm (Restriction) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 766 Tm (Measurement CSV/DAT/TXT) Tj ET
+BT /F1 8 Tf 1 0 0 1 172 766 Tm (Open) Tj ET
+BT /F1 8 Tf 1 0 0 1 294 766 Tm (CC-BY-4.0) Tj ET
+BT /F1 8 Tf 1 0 0 1 416 766 Tm (None; no personal data) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 750 Tm (Lab notes) Tj ET
+BT /F1 8 Tf 1 0 0 1 172 750 Tm (Open) Tj ET
+BT /F1 8 Tf 1 0 0 1 294 750 Tm (CC-BY-4.0) Tj ET
+BT /F1 8 Tf 1 0 0 1 416 750 Tm (Redact third-party names on requ) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 734 Tm (180 nm PDK / foundry models) Tj ET
+BT /F1 8 Tf 1 0 0 1 172 734 Tm (Not distributed) Tj ET
+BT /F1 8 Tf 1 0 0 1 294 734 Tm (N/A) Tj ET
+BT /F1 8 Tf 1 0 0 1 416 734 Tm (IPR / contractual \(foundry NDA\)) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 718 Tm (Pre-publication embargo) Tj ET
+BT /F1 8 Tf 1 0 0 1 172 718 Tm (None currently) Tj ET
+BT /F1 8 Tf 1 0 0 1 294 718 Tm (?) Tj ET
+BT /F1 8 Tf 1 0 0 1 416 718 Tm (Max. embargo if patents filed) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 696 Tm (#### 2.2.1 Repository) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 682 Tm (Primary working repository: GitHub \(https://github.com/uzzielperez/CNM\).) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 668 Tm (Archival repository \(planned\): Zenodo ? trusted, metadata-ready, EOSC-federated general-) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 654 Tm (purpose repository.) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 640 Tm (#### 2.2.2 Data) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 626 Tm (Principle: *As open as possible, as closed as necessary* \(Horizon Europe Programme Guide\).) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 612 Tm (Access protocol: HTTPS git clone and direct download. No authentication for open datasets.) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 598 Tm (#### 2.2.3 Metadata) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 584 Tm (Metadata openly available under CC0. Metadata includes access conditions and contact point) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 570 Tm (even if datasets are later restricted.) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 556 Tm (Contact: uzzielperez25@gmail.com) Tj ET
+BT /F2 12 Tf 1 0 0 1 50 534 Tm (2.3 Making data interoperable) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 516 Tm (Repository structure:) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 502 Tm (Interoperability: UTF-8 encoding; SI units in headers; consistent column naming \(vgs, vds,) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 488 Tm (ids, freq_hz, temp_c\); CSV RFC 4180 compliance. JSON sidecars in metadata/ link tabular) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 474 Tm (files to hardware and experimental context so pipelines can resolve paths programmatically) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 460 Tm (\(see Section 2.1\).) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 446 Tm (? data/01_raw/ ? factory and instrument outputs \(read-only\)) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 432 Tm (? data/02_processed/ ? calibrated tables) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 418 Tm (? data/03_final/ ? publication-ready matrices) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 404 Tm (? src/ ? analysis pipelines \(Python, MATLAB, Origin\)) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 390 Tm (? DataManagementPlan/ ? formal DMP \(this document\)) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 376 Tm (? docs/ ? calibration sheets and lab notes) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 362 Tm (? metadata/ ? JSON experiment sidecars \(index.json + per-run records\)) Tj ET
+BT /F2 12 Tf 1 0 0 1 50 340 Tm (2.4 Increase data re-use) Tj ET
+BT /F2 8 Tf 1 0 0 1 50 322 Tm (Output) Tj ET
+BT /F2 8 Tf 1 0 0 1 213 322 Tm (Licence) Tj ET
+BT /F2 8 Tf 1 0 0 1 376 322 Tm (Citation requirement) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 306 Tm (Datasets) Tj ET
+BT /F1 8 Tf 1 0 0 1 213 306 Tm (CC-BY-4.0) Tj ET
+BT /F1 8 Tf 1 0 0 1 376 306 Tm (DOI + version tag) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 290 Tm (Software \(src/\)) Tj ET
+BT /F1 8 Tf 1 0 0 1 213 290 Tm (MIT) Tj ET
+BT /F1 8 Tf 1 0 0 1 376 290 Tm (Repository + release tag) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 274 Tm (Documentation) Tj ET
+BT /F1 8 Tf 1 0 0 1 213 274 Tm (CC-BY-4.0) Tj ET
+BT /F1 8 Tf 1 0 0 1 376 274 Tm (Same as datasets) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 252 Tm (Reuse tools: Python 3.10+ \(pandas\), MATLAB R2021a+, Origin 2021+. See repository README) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 238 Tm (Section 9 and src/ for pipelines.) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 224 Tm (Downstream users must cite the DOI, not redistribute PDK content, and document derivative) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 210 Tm (processing.) Tj ET
+BT /F2 14 Tf 1 0 0 1 50 188 Tm (3. Other research outputs) Tj ET
+BT /F2 8 Tf 1 0 0 1 50 170 Tm (Output) Tj ET
+BT /F2 8 Tf 1 0 0 1 213 170 Tm (Location) Tj ET
+BT /F2 8 Tf 1 0 0 1 376 170 Tm (Preservation) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 154 Tm (Analysis scripts) Tj ET
+BT /F1 8 Tf 1 0 0 1 213 154 Tm (src/) Tj ET
+BT /F1 8 Tf 1 0 0 1 376 154 Tm (Git + Zenodo archive) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 138 Tm (Figures from 03_final/) Tj ET
+BT /F1 8 Tf 1 0 0 1 213 138 Tm (Publications / Zenodo) Tj ET
+BT /F1 8 Tf 1 0 0 1 376 138 Tm (Link to source CSV) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 122 Tm (SPICE netlists) Tj ET
+BT /F1 8 Tf 1 0 0 1 213 122 Tm (src/ or docs/) Tj ET
+BT /F1 8 Tf 1 0 0 1 376 122 Tm (Git; exclude NDA decks) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 106 Tm (Presentations) Tj ET
+BT /F1 8 Tf 1 0 0 1 213 106 Tm (DataManagementPlan/ or Zenodo) Tj ET
+BT /F1 8 Tf 1 0 0 1 376 106 Tm (Supplementary material) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 84 Tm (Software documentation follows Lee et al. \(2014\) Ten simple rules for documenting scientific) Tj ET
 endstream
 endobj
 10 0 obj
 << /Type /Page /Parent 13  0 R /MediaBox [0 0 595 842] /Contents 9 0 R /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> >>
 endobj
 11 0 obj
-<< /Length 1426 >>
+<< /Length 3475 >>
 stream
-BT /F2 8 Tf 1 0 0 1 50 800 Tm (Topic) Tj ET
-BT /F2 8 Tf 1 0 0 1 295 800 Tm (Assessment) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 784 Tm (Human subjects) Tj ET
-BT /F1 8 Tf 1 0 0 1 295 784 Tm (Not applicable ? device measurem) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 768 Tm (GDPR) Tj ET
-BT /F1 8 Tf 1 0 0 1 295 768 Tm (Not applicable for current asset) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 752 Tm (Intellectual property) Tj ET
-BT /F1 8 Tf 1 0 0 1 295 752 Tm (Measurement data CC-BY-4.0; PDK ) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 736 Tm (Export control) Tj ET
-BT /F1 8 Tf 1 0 0 1 295 736 Tm (Characterization results only; r) Tj ET
-BT /F1 8 Tf 1 0 0 1 50 720 Tm (Ethics committee) Tj ET
-BT /F1 8 Tf 1 0 0 1 295 720 Tm (Not required for ex vivo device ) Tj ET
-BT /F2 14 Tf 1 0 0 1 50 690 Tm (7. Other issues) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 672 Tm (End of Data Management Plan) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 658 Tm (? Legacy path datasets/ is being migrated to data/01_raw/, data/02_processed/,) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 644 Tm (data/03_final/.) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 630 Tm (? Zenodo DOI and ORCID to be added before formal grant submission.) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 616 Tm (? Grant agreement number and institution to be inserted when CNM is linked to a funded) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 602 Tm (Horizon Europe project.) Tj ET
-BT /F1 11 Tf 1 0 0 1 50 588 Tm (? This DMP is a living document; review annually or before each Zenodo release.) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 800 Tm (software.) Tj ET
+BT /F2 14 Tf 1 0 0 1 50 778 Tm (4. Allocation of resources) Tj ET
+BT /F2 8 Tf 1 0 0 1 50 760 Tm (Activity) Tj ET
+BT /F2 8 Tf 1 0 0 1 213 760 Tm (Responsible) Tj ET
+BT /F2 8 Tf 1 0 0 1 376 760 Tm (Effort) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 744 Tm (Data curation) Tj ET
+BT /F1 8 Tf 1 0 0 1 213 744 Tm (Data steward) Tj ET
+BT /F1 8 Tf 1 0 0 1 376 744 Tm (~2 h/month) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 728 Tm (DMP / README updates) Tj ET
+BT /F1 8 Tf 1 0 0 1 213 728 Tm (Data steward) Tj ET
+BT /F1 8 Tf 1 0 0 1 376 728 Tm (Quarterly) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 712 Tm (Zenodo DOI registration) Tj ET
+BT /F1 8 Tf 1 0 0 1 213 712 Tm (Data steward) Tj ET
+BT /F1 8 Tf 1 0 0 1 376 712 Tm (~1 h per release) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 696 Tm (Backup verification) Tj ET
+BT /F1 8 Tf 1 0 0 1 213 696 Tm (Data steward) Tj ET
+BT /F1 8 Tf 1 0 0 1 376 696 Tm (Annually) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 680 Tm (Storage) Tj ET
+BT /F1 8 Tf 1 0 0 1 213 680 Tm (GitHub + Zenodo free tier) Tj ET
+BT /F1 8 Tf 1 0 0 1 376 680 Tm (?0 at current volume) Tj ET
+BT /F2 14 Tf 1 0 0 1 50 650 Tm (5. Data security) Tj ET
+BT /F2 8 Tf 1 0 0 1 50 632 Tm (Risk) Tj ET
+BT /F2 8 Tf 1 0 0 1 295 632 Tm (Mitigation) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 616 Tm (Overwrite of raw data) Tj ET
+BT /F1 8 Tf 1 0 0 1 295 616 Tm (data/01_raw/ append-only; Git hi) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 600 Tm (Data loss) Tj ET
+BT /F1 8 Tf 1 0 0 1 295 600 Tm (GitHub remote + Zenodo snapshots) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 584 Tm (Unauthorised modification) Tj ET
+BT /F1 8 Tf 1 0 0 1 295 584 Tm (Branch protection; immutable rel) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 568 Tm (Confidential leakage) Tj ET
+BT /F1 8 Tf 1 0 0 1 295 568 Tm (No PDK/foundry files in reposito) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 552 Tm (Local workstation loss) Tj ET
+BT /F1 8 Tf 1 0 0 1 295 552 Tm (Push after each curated batch) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 530 Tm (Standard institutional IT policies apply. No sensitive personal data stored \(Section 6\).) Tj ET
+BT /F2 14 Tf 1 0 0 1 50 508 Tm (6. Ethics) Tj ET
+BT /F2 8 Tf 1 0 0 1 50 490 Tm (Topic) Tj ET
+BT /F2 8 Tf 1 0 0 1 295 490 Tm (Assessment) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 474 Tm (Human subjects) Tj ET
+BT /F1 8 Tf 1 0 0 1 295 474 Tm (Not applicable ? device measurem) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 458 Tm (GDPR) Tj ET
+BT /F1 8 Tf 1 0 0 1 295 458 Tm (Not applicable for current asset) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 442 Tm (Intellectual property) Tj ET
+BT /F1 8 Tf 1 0 0 1 295 442 Tm (Measurement data CC-BY-4.0; PDK ) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 426 Tm (Export control) Tj ET
+BT /F1 8 Tf 1 0 0 1 295 426 Tm (Characterization results only; r) Tj ET
+BT /F1 8 Tf 1 0 0 1 50 410 Tm (Ethics committee) Tj ET
+BT /F1 8 Tf 1 0 0 1 295 410 Tm (Not required for ex vivo device ) Tj ET
+BT /F2 14 Tf 1 0 0 1 50 380 Tm (7. Other issues) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 362 Tm (End of Data Management Plan) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 348 Tm (? Legacy path datasets/ is being migrated to data/01_raw/, data/02_processed/,) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 334 Tm (data/03_final/.) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 320 Tm (? Zenodo DOI and ORCID to be added before formal grant submission.) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 306 Tm (? Grant agreement number and institution to be inserted when CNM is linked to a funded) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 292 Tm (Horizon Europe project.) Tj ET
+BT /F1 11 Tf 1 0 0 1 50 278 Tm (? This DMP is a living document; review annually or before each Zenodo release.) Tj ET
 endstream
 endobj
 12 0 obj
@@ -354,17 +384,17 @@ xref
 0000000154 00000 n 
 0000000642 00000 n 
 0000000780 00000 n 
-0000007780 00000 n 
-0000007918 00000 n 
-0000013337 00000 n 
-0000013475 00000 n 
-0000018576 00000 n 
-0000018715 00000 n 
-0000020194 00000 n 
-0000020334 00000 n 
-0000020418 00000 n 
+0000007755 00000 n 
+0000007893 00000 n 
+0000013247 00000 n 
+0000013385 00000 n 
+0000018936 00000 n 
+0000019075 00000 n 
+0000022603 00000 n 
+0000022743 00000 n 
+0000022827 00000 n 
 trailer
 << /Size 15 /Root 14 0 R >>
 startxref
-20469
+22878
 %%EOF
