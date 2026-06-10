@@ -44,7 +44,7 @@ Run via **File → Script → Run Script** or paste into the Script Window.
 
 ## Project files
 
-Store reusable graph templates as `documentation/origin_templates/` (not committed until cleaned). Binary `.opju` projects are poor for Git; prefer CSV in `datasets/` plus `.ogs` scripts in this folder.
+Store reusable graph templates as `docs/origin_templates/` (not committed until cleaned). Binary `.opju` projects are poor for Git; prefer CSV in `datasets/` plus `.ogs` scripts in this folder.
 
 ## Licence
 

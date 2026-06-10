@@ -5,6 +5,7 @@
 | **Repository** | [github.com/uzzielperez/CNM](https://github.com/uzzielperez/CNM) |
 | **Data steward** | Uzziel Perez ([uzzielperez25@gmail.com](mailto:uzzielperez25@gmail.com)) |
 | **DMP version** | 1.1 |
+| **Formal DMP (PDF)** | [`DataManagementPlan/DMP_CNM_HE_v1.1.pdf`](DataManagementPlan/DMP_CNM_HE_v1.1.pdf) |
 | **Last reviewed** | 2025-06-10 |
 | **Dissemination** | Public (measurement data); restricted elements noted in §2.2 |
 | **Policy basis** | Horizon Europe GA Art. 17 · FAIR principles · *as open as possible, as closed as necessary* |
@@ -12,6 +13,21 @@
 Semiconductor device characterization data for **180 nm CMOS** devices: IV curves, 1/f noise spectra, AC frequency response, and wafer-level yield summaries. This README serves as the **repository landing page** and a **condensed Data Management Plan (DMP)** aligned with EU research-data requirements (Horizon Europe DMP template v1.1, Science Europe core requirements).
 
 **Technology context:** 180 nm PDK · nominal supply 1.8 V · process corners `tt`, `ff`, `ss`, `fs`, `sf`
+
+### Formal DMP document
+
+This README is a **condensed, web-native DMP** for day-to-day use in the repository. The **human-readable deliverable** for funders and auditors is a separate document:
+
+| Format | Path | Use |
+|--------|------|-----|
+| **PDF** | [`DataManagementPlan/DMP_CNM_HE_v1.1.pdf`](DataManagementPlan/DMP_CNM_HE_v1.1.pdf) | Upload to grant portals, attach to reports |
+| **Markdown (source)** | [`DataManagementPlan/DMP_CNM_HE_v1.1.md`](DataManagementPlan/DMP_CNM_HE_v1.1.md) | Edit and regenerate the PDF |
+
+Regenerate the PDF after editing the Markdown: `python3 src/python/generate_dmp_pdf.py`
+
+**Template source:** Structure follows the official **Horizon Europe Data Management Plan template v1.1** (01.04.2022), as published by the European Commission on the [EU Funding & Tenders Portal](https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/myarea/projects) under *Reference Documents → Project reporting templates → Data management plan (HE)*. Using that Word template is recommended but not mandatory; this PDF meets the same section requirements (Art. 17, Grant Agreement). See also [Science Europe core requirements](https://doi.org/10.5281/zenodo.4915862) for cross-funder alignment.
+
+Keep the README, Markdown source, and PDF **version numbers in sync** (currently v1.1).
 
 ---
 
@@ -58,9 +74,9 @@ Preferred formats follow [UK Data Service recommended formats](https://ukdataser
 | Stage | Location | Rule |
 |-------|----------|------|
 | Raw instrument output | `data/01_raw/` | **Read-only.** Never overwrite; append dated exports. |
-| Calibrated / filtered | `data/02_processed/` | Document transformation in `src/` or `documentation/`. |
+| Calibrated / filtered | `data/02_processed/` | Document transformation in `src/` or `docs/`. |
 | Figure-ready matrices | `data/03_final/` | Versioned; cite in publications. |
-| Methods & calibration | `documentation/` | Linked from dataset README sidecars. |
+| Methods & calibration | `docs/` | Linked from dataset README sidecars. |
 
 Each dataset should carry a companion `README` or metadata row stating: **who** collected it, **when**, **with which instrument**, **under which bias/temperature**, and **what processing** was applied.
 
@@ -123,7 +139,7 @@ related_identifier:
 | Data class | Access | Repository | Licence | Restriction rationale |
 |------------|--------|------------|---------|----------------------|
 | Measurement CSV/DAT/TXT | Open | GitHub + Zenodo (planned) | **CC-BY-4.0** | None — no personal data |
-| Lab notes (`documentation/`) | Open | Same | CC-BY-4.0 | Redact third-party names if requested |
+| Lab notes (`docs/`) | Open | Same | CC-BY-4.0 | Redact third-party names if requested |
 | 180 nm PDK / foundry models | **Not included** | N/A | Foundry NDA | **IPR / contractual** — refer to vendor licence only |
 | Pre-publication embargo | None currently | — | — | Apply max. embargo needed for IP review if patents filed |
 
@@ -143,7 +159,8 @@ CNM/
 │   ├── 02_processed/         # Calibrated, noise-filtered tables
 │   └── 03_final/             # Matrices for figures and reports
 ├── src/                      # Analysis pipelines and automation
-├── documentation/            # Calibration sheets, datasheets, lab notes
+├── DataManagementPlan/       # Formal DMP (PDF + Markdown source)
+├── docs/                     # Calibration sheets, datasheets, lab notes
 └── metadata/                 # DataCite / Dublin Core sidecars (planned)
 ```
 
@@ -173,7 +190,7 @@ CNM/
 - **Python 3.10+** — `src/python/run_pipeline.py` (CSV + DAT → `data/02_processed/`)
 - **MATLAB R2021a+** — `src/matlab/run_cnm_pipeline.m`
 - **Origin 2024b** — LabTalk scripts in `src/origin/*.ogs`
-- SPICE simulator (vendor-specific) for simulation replay — document version in `documentation/`
+- SPICE simulator (vendor-specific) for simulation replay — document version in `docs/`
 
 ---
 
@@ -183,8 +200,8 @@ CNM/
 |-------------|----------|--------------|
 | Analysis scripts | `src/` (planned) | Git + Zenodo code archive |
 | Figures derived from `03_final/` | Publications / Zenodo | Link back to source CSV |
-| SPICE netlists | `src/` or `documentation/` | Git; exclude NDA-restricted foundry decks |
-| Presentations | External / `documentation/` | Zenodo supplementary material |
+| SPICE netlists | `src/` or `docs/` | Git; exclude NDA-restricted foundry decks |
+| Presentations | External / `DataManagementPlan/` | Zenodo supplementary material |
 
 Software should follow [Ten simple rules for documenting scientific software](https://doi.org/10.1371/journal.pcbi.1003285) (Lee et al., 2014).
 
@@ -245,9 +262,9 @@ Legacy paths are being migrated to the standard tree below.
 | `untitled2.csv` | Ron/Roff ratios | `data/02_processed/` | Processed |
 | `FINAL_v3_USETHIS.csv` | AC gain & phase vs. frequency | `data/03_final/` | **Final — use for figures** |
 | `definitive_DEFINITIVE.csv` | Wafer yield summary | `data/03_final/` | Final |
-| `docs/aaa.txt` | Simulation setup (PDK, corners, MC) | `documentation/` | Provenance |
-| `docs/results_copy.txt` | Vth summary extract | `documentation/` | Provenance |
-| `docs/meeting_notes_also_has_data.txt` | Meeting notes, leakage table | `documentation/` | Provenance |
+| `docs/aaa.txt` | Simulation setup (PDK, corners, MC) | `docs/` | Provenance |
+| `docs/results_copy.txt` | Vth summary extract | `docs/` | Provenance |
+| `docs/meeting_notes_also_has_data.txt` | Meeting notes, leakage table | `docs/` | Provenance |
 
 > Never edit `01_raw/` in place. Derive new tables in `02_processed/` or `03_final/` and log the transformation.
 
@@ -255,7 +272,7 @@ Legacy paths are being migrated to the standard tree below.
 
 ## 8. Key reference results
 
-nMOS, W/L = 10/0.18 µm (`documentation/results_copy.txt`):
+nMOS, W/L = 10/0.18 µm (`docs/results_copy.txt`):
 
 | Parameter | Value |
 |-----------|-------|
@@ -264,7 +281,7 @@ nMOS, W/L = 10/0.18 µm (`documentation/results_copy.txt`):
 | Ion | 580 µA |
 | Subthreshold swing | 68 mV/dec |
 
-Corner leakage (`documentation/meeting_notes_also_has_data.txt`):
+Corner leakage (`docs/meeting_notes_also_has_data.txt`):
 
 | Corner | Temp (°C) | Ileak |
 |--------|-----------|-------|
@@ -274,7 +291,7 @@ Corner leakage (`documentation/meeting_notes_also_has_data.txt`):
 | fs | 27 | 1.4 nA |
 | sf | 27 | 1.1 nA |
 
-**Simulation context** (`documentation/aaa.txt`): 180 nm PDK · corners `tt ff ss fs sf` · VDD = 1.8 V · Monte Carlo = 500 runs.
+**Simulation context** (`docs/aaa.txt`): 180 nm PDK · corners `tt ff ss fs sf` · VDD = 1.8 V · Monte Carlo = 500 runs.
 
 ---
 
@@ -429,7 +446,7 @@ FAIR principles do not guarantee intrinsic data quality — always inspect `01_r
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | 2025-06-10 | Uzziel Perez | Initial DMP-compliant README; FAIR inventory; EU access policy |
-| 1.1 | 2025-06-10 | Uzziel Perez | Added `src/` pipelines; per-tool user guides (Python, MATLAB, Origin) |
+| 1.1 | 2025-06-10 | Uzziel Perez | Added `src/` pipelines; per-tool user guides; HE DMP PDF in `DataManagementPlan/` |
 
 *This DMP is a living document. Review and update at least once per project year or before each Zenodo release.*
 
